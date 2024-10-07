@@ -1,0 +1,41 @@
+import { Meta, Story } from "@storybook/addon-docs";
+import Text from "./Text";
+
+<Meta title="Components/Text" component={Text} />
+
+# Text Component Documentation
+
+## Overview
+
+The `Text` component is a versatile React component for rendering various types of text elements in a consistent and customizable way. It supports multiple HTML tags, including headings, paragraphs, blockquotes, inline text (`span`), and more, with additional styling options like bold, italics, and highlights. It is built using TypeScript and supports Tailwind CSS for easy styling.
+
+## Installation
+
+Ensure you have React, TypeScript, and Tailwind CSS set up in your project.
+
+```bash
+npm install react
+npm install typescript
+npm install tailwindcss
+```
+
+## Usage
+
+### Basic Example
+
+```tsx
+import React from "react";
+import Text from "./Text";
+
+function App() {
+  return (
+    <div>
+      <Text variant="h1">This is an H1 heading</Text>
+      <Text variant="p">This is a paragraph of text.</Text>
+      <Text variant="blockquote">This is a blockquote.</Text>
+    </div>
+  );
+}
+
+export default App;
+```
