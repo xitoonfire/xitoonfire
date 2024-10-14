@@ -48,7 +48,7 @@ function Table({ columns, data }: TableProps) {
                 onClick={() => handleDelete(rowIndex)}
                 className="text-red-500 hover:text-red-700"
               >
-                🗑️
+                ❌
               </button>
             </td>
           </tr>
