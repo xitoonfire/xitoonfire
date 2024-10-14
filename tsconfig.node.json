@@ -7,14 +7,10 @@
 
     /* Bundler mode */
     "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
     "isolatedModules": true,
     "moduleDetection": "force",
-    
-    /* Enable emit and composite */
-    "noEmit": false,                    // Allow emitting files
-    "declaration": true,                // Generate type declaration files
-    "declarationMap": true,             // Generate source maps for the declarations
-    "composite": true,                  // Enable project references
+    "noEmit": true,
 
     /* Linting */
     "strict": true,
@@ -22,6 +18,5 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["vite.config.ts"],
-  "exclude": ["node_modules", "dist"]
+  "include": ["vite.config.ts"]
 }

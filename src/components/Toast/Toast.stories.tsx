@@ -15,7 +15,7 @@ const Template: StoryFn<any> = (args) => {
   const [visible, setVisible] = useState(true);
 
   useEffect(() => {
-    // Reset visibility when args change (e.g., in Storybook controls)
+    
     setVisible(true);
   }, [args]);
 
@@ -24,7 +24,7 @@ const Template: StoryFn<any> = (args) => {
       {visible ? (
         <Toast {...args} onClose={() => setVisible(false)} />
       ) : (
-        <div /> // Return an empty div when the toast is not visible
+        <div /> 
       )}
     </>
   );

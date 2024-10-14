@@ -19,7 +19,7 @@ function Input({ type = 'text', label, isRequired, ...props }: InputProps) {
         type={type}
         className={`p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 ${
           isRequired ? 'border-red-500' : 'border-gray-300'
-        } w-full max-w-xs`} // Adjust width as needed
+        } w-full max-w-xs`} 
         required={isRequired}
         {...props}
       />

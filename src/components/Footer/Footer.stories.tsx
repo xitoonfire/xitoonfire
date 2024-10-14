@@ -15,7 +15,7 @@ export default {
 
 const Template: StoryFn<FooterProps> = (args) => <Footer {...args} />;
 
-// Default Footer
+
 export const DefaultFooter = Template.bind({});
 DefaultFooter.args = {
   links: [
@@ -32,7 +32,7 @@ DefaultFooter.args = {
   copyright: 'MyWebsite. All rights reserved.',
 };
 
-// Footer with No Social Media
+
 export const NoSocialMediaFooter = Template.bind({});
 NoSocialMediaFooter.args = {
   links: [

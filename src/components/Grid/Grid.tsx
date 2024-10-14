@@ -35,8 +35,7 @@ const Grid = ({
   gap = 'medium',
   responsive = false,
 }: GridProps) => {
-  // Map columns to Tailwind class
-  const columnClasses = columnMap[columns] || 'grid-cols-3'; // Fallback to 3 columns if invalid number
+  const columnClasses = columnMap[columns] || 'grid-cols-3'; 
   
   const responsiveClasses = responsive
     ? 'sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'

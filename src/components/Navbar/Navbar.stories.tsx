@@ -20,10 +20,10 @@ export default {
 
 const Template: StoryFn<NavbarProps> = (args) => <Navbar {...args} />;
 
-// Default Navbar with Logo
+
 export const DefaultNavbarWithLogo = Template.bind({});
 DefaultNavbarWithLogo.args = {
-  logoSrc: 'https://example.com/logo.png', // Example logo
+  logoSrc: 'https://example.com/logo.png', 
   altText: 'My Brand Logo',
   links: [
     { name: 'Home', href: '/' },
@@ -33,7 +33,7 @@ DefaultNavbarWithLogo.args = {
   ],
 };
 
-// Navbar with Custom Links and Logo
+
 export const CustomNavbarWithLogo = Template.bind({});
 CustomNavbarWithLogo.args = {
   logoSrc: 'https://example.com/custom-logo.png',

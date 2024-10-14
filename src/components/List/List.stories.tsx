@@ -6,7 +6,7 @@ export default {
   component: List,
   argTypes: {
     items: {
-      control: { type: 'object' }, // 'object' instead of 'array'
+      control: { type: 'object' },
     },
     ordered: { control: { type: 'boolean' } },
     className: { control: { type: 'text' } },

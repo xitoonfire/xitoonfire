@@ -1,8 +1,8 @@
 export interface ListProps {
-    items: string[]; // Array of items to display
-    ordered?: boolean; // Whether the list is ordered (numbered) or unordered (bulleted)
-    className?: string; // Additional custom classes for the list
-    itemClassName?: string; // Additional custom classes for each list item
+    items: string[]; 
+    ordered?: boolean; 
+    className?: string; 
+    itemClassName?: string; 
   }
   
   function List({
@@ -11,7 +11,7 @@ export interface ListProps {
     className = '',
     itemClassName = '',
   }: ListProps) {
-    const ListTag = ordered ? 'ol' : 'ul'; // Determines if it's an ordered or unordered list
+    const ListTag = ordered ? 'ol' : 'ul'; 
   
     return (
       <ListTag className={`list-none ${className}`}>

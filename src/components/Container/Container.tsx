@@ -24,15 +24,15 @@ function Container({
   };
 
   const className = [
-    'w-full',         // Full width of the container
-    'mx-auto',        // Center horizontally
-    maxWidthClasses[maxWidth], // Max width based on prop
-    center && 'flex justify-center', // Center content if true
-    padding && 'px-4 sm:px-6 lg:px-8', // Add padding if true
-    showBoundary && 'bg-gray-100 border border-gray-300', // Show boundary if true
+    'w-full',         
+    'mx-auto',       
+    maxWidthClasses[maxWidth], 
+    center && 'flex justify-center',
+    padding && 'px-4 sm:px-6 lg:px-8', 
+    showBoundary && 'bg-gray-100 border border-gray-300', 
   ]
-    .filter(Boolean) // Remove falsy values
-    .join(' ');      // Join classes with space
+    .filter(Boolean) 
+    .join(' ');      
 
   return (
     <div className={className}>

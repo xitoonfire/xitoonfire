@@ -2,9 +2,9 @@ import { ReactNode } from 'react';
 
 interface RowProps {
   children: ReactNode;
-  gap?: 'none' | 'small' | 'medium' | 'large'; // Gap between row items
-  alignItems?: 'start' | 'center' | 'end'; // Vertical alignment of items
-  justifyContent?: 'start' | 'center' | 'end' | 'between' | 'around'; // Horizontal alignment
+  gap?: 'none' | 'small' | 'medium' | 'large'; 
+  alignItems?: 'start' | 'center' | 'end'; 
+  justifyContent?: 'start' | 'center' | 'end' | 'between' | 'around'; 
 }
 
 const gapMap: { [key: string]: string } = {

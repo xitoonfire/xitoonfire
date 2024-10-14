@@ -1,36 +1,39 @@
-import resolve from "@rollup/plugin-node-resolve";
-import commonjs from "@rollup/plugin-commonjs";
-import typescript from "rollup-plugin-typescript2";
-import peerDepsExternal from "rollup-plugin-peer-deps-external";
+import peerDepsExternal from "rollup-plugin-peer-deps-external"
+import commonjs from "@rollup/plugin-commonjs"
+import typescript from "@rollup/plugin-typescript"
+import dts from "rollup-plugin-dts"
+import terser from "@rollup/plugin-terser"
+import resolve from "@rollup/plugin-node-resolve"
 
-export default {
-  input: "src/index.tsx", // Entry point
-  output: [
+const packageJson = require("./package.json")
+
+export default[
     {
-      file: "dist/index.js", // CommonJS output
-      format: "cjs",
-      sourcemap: true,
-      exports: "named", // Ensure named exports
+        input:'src/index.ts',
+        output:[
+            {
+                file: packageJson.main,
+                format: "cjs",
+                sourcemap: true,    
+            },
+            {
+                file: packageJson.module,
+                format: "esm",
+                sourcemap: true,    
+            }
+        ],
+        plugins:[
+            peerDepsExternal(),
+            resolve(),
+            commonjs(),
+            typescript({tsconfig:"./tsconfig.json"}),
+            terser()
+        ],
+        external:["react","react-dom"],
     },
     {
-      file: "dist/index.esm.js", // ESM output
-      format: "esm",
-      sourcemap: true,
-    },
-  ],
-  plugins: [
-    peerDepsExternal(), // Automatically externalize peer dependencies
-    resolve({
-      extensions: [".js", ".jsx", ".ts", ".tsx"], // Include .tsx files
-    }),
-    commonjs(), // Convert CommonJS modules to ES6
-    typescript({
-      tsconfig: "tsconfig.app.json", // Use the appropriate tsconfig
-      useTsconfigDeclarationDir: true, // Output .d.ts files in the declarationDir specified in tsconfig
-      clean: true, // Clean previous build artifacts
-      declaration: true, // Generate .d.ts files
-      declarationDir: "dist/types", // Specify the output directory for .d.ts files
-    }),
-  ],
-  external: ["react", "react-dom"], // Prevent bundling React
-};
+        input:"src/index.ts",
+        output:[{file:packageJson.types}],
+        plugins: [dts.default()]
+    }
+]

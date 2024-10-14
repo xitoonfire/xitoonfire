@@ -32,7 +32,7 @@ export default {
 
 const Template: StoryFn<ButtonProps> = (args) => <Button {...args} />;
 
-// Primary Button
+
 export const Primary = Template.bind({});
 Primary.args = {
   label: 'Primary Button',
@@ -41,7 +41,7 @@ Primary.args = {
   shape: 'rounded',
 };
 
-// Secondary Button
+
 export const Secondary = Template.bind({});
 Secondary.args = {
   label: 'Secondary Button',
@@ -50,7 +50,7 @@ Secondary.args = {
   shape: 'boxed',
 };
 
-// Tertiary Button
+
 export const Tertiary = Template.bind({});
 Tertiary.args = {
   label: 'Tertiary Button',
@@ -59,7 +59,7 @@ Tertiary.args = {
   shape: 'rounded',
 };
 
-// Disabled Button
+
 export const Disabled = Template.bind({});
 Disabled.args = {
   label: 'Disabled Button',

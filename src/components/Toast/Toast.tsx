@@ -1,10 +1,10 @@
 import { useEffect } from 'react';
 
 interface ToastProps {
-  message: string; // Notification message
-  type?: 'success' | 'error' | 'warning' | 'info'; // Type of notification
-  duration?: number; // Duration in milliseconds before auto-dismiss
-  onClose?: () => void; // Callback when the toast is dismissed
+  message: string; 
+  type?: 'success' | 'error' | 'warning' | 'info'; 
+  duration?: number; 
+  onClose?: () => void; 
 }
 
 function Toast({ message, type = 'info', duration = 3000, onClose }: ToastProps) {
@@ -15,13 +15,13 @@ function Toast({ message, type = 'info', duration = 3000, onClose }: ToastProps)
     info: 'bg-blue-100 text-blue-700 border-blue-400',
   };
 
-  // Auto-dismiss the toast after a specified duration
+  
   useEffect(() => {
     const timer = setTimeout(() => {
       if (onClose) onClose();
     }, duration);
 
-    return () => clearTimeout(timer); // Clear timer on unmount
+    return () => clearTimeout(timer); 
   }, [duration, onClose]);
 
   return (

@@ -19,7 +19,6 @@ function Image({
   border = false,
   className = '',
 }: ImageProps) {
-  // Ensure TailwindCSS classes are applied correctly
   const baseClasses = 'transition-all';
   const roundedClasses = rounded ? 'rounded-lg' : '';
   const shadowClasses = shadow ? 'shadow-md' : '';

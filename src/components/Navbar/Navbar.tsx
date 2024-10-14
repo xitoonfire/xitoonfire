@@ -2,8 +2,8 @@ import  { useState } from 'react';
 
  export interface NavbarProps {
   links: { name: string; href: string }[];
-  logoSrc: string; // New prop to accept the logo image source
-  altText?: string; // Optional alt text for the logo
+  logoSrc: string; 
+  altText?: string; 
   className?: string;
 }
 
@@ -13,12 +13,12 @@ function Navbar({ links, logoSrc, altText = 'Logo', className = '' }: NavbarProp
   return (
     <nav className={`bg-white shadow-md py-4 px-6 ${className}`}>
       <div className="container mx-auto flex justify-between items-center">
-        {/* Display the logo instead of text */}
+        {}
         <div>
           <img src={logoSrc} alt={altText} className="h-8 w-auto" />
         </div>
 
-        {/* Links for Desktop */}
+        {}
         <div className="hidden md:flex space-x-6">
           {links.map((link) => (
             <a key={link.name} href={link.href} className="text-untbrown-light hover:text-untblue-dark">
@@ -27,7 +27,7 @@ function Navbar({ links, logoSrc, altText = 'Logo', className = '' }: NavbarProp
           ))}
         </div>
 
-        {/* Mobile Menu Button */}
+        {}
         <div className="md:hidden">
           <button onClick={() => setIsOpen(!isOpen)} className="text-untblue">
             {isOpen ? 'Close' : 'Menu'}
@@ -35,7 +35,7 @@ function Navbar({ links, logoSrc, altText = 'Logo', className = '' }: NavbarProp
         </div>
       </div>
 
-      {/* Mobile Links */}
+      {}
       {isOpen && (
         <div className="md:hidden mt-4 space-y-4">
           {links.map((link) => (

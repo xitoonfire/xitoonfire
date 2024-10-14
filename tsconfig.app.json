@@ -5,21 +5,20 @@
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
+
+    /* Bundler mode */
     "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
     "isolatedModules": true,
     "moduleDetection": "force",
-    "composite": true,
-    "noEmit": false, // Keep as false to emit .js files
-    "declaration": true, // Enable declaration file generation
-    "declarationMap": true, // Generate declaration source maps
-    "declarationDir": "./dist/types", // Output directory for type declarations
-    "outDir": "./dist", // Output directory for compiled .js files
+    "noEmit": true,
     "jsx": "react-jsx",
+
+    /* Linting */
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src/**/*"], // Include all files in src folder
-  "exclude": ["node_modules", "dist"] // Exclude node_modules and dist folders
+  "include": ["src"]
 }

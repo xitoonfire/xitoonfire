@@ -1,10 +1,8 @@
-
-
 export interface ButtonProps {
   label: string;
   variant?: 'primary' | 'secondary' | 'tertiary';
   size?: 'small' | 'medium' | 'large';
-  shape?: 'rounded' | 'boxed'; // New prop for shape customization
+  shape?: 'rounded' | 'boxed'; 
   disabled?: boolean;
   className?: string;
   onClick: () => void;
@@ -14,7 +12,7 @@ function Button({
   label,
   variant = 'primary',
   size = 'medium',
-  shape = 'rounded', // Default shape is rounded
+  shape = 'rounded', 
   disabled = false,
   className = '',
   onClick,
